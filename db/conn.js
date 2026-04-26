@@ -8,9 +8,9 @@ const conn = async () => {
   try {
     await mongoose.connect(process.env.mongo_uri);
     console.log("MongoDB Connected Successfully ✅");
-  } catch (error) {
-    console.log("Connection Error ❌:", error.message);
-  }
+   } catch (error) {
+    console.log("Full Error:", error); // Pura error print karo
+}
 };
 
 conn();
